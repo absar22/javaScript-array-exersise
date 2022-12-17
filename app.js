@@ -43,17 +43,17 @@ console.log(camelize('This-IS-my-name'))
 
 // For instance:
 
-let arr = [5, 3, 8, 1];
+// let arr = [5, 3, 8, 1];
 
 function filterRange(arr, a, b){
   return arr.filter(item => (a <= item && item <= b))
 }
 
-let filtered = filterRange(arr, 1, 4);
+// let filtered = filterRange(arr, 1, 4);
 
-alert( filtered ); // 3,1 (matching values)
+// alert( filtered ); // 3,1 (matching values)
 
-alert( arr ); // 5,3,8,1 (not modified)
+// alert( arr ); // 5,3,8,1 (not modified)
 
 
 // Filter range "in place"
@@ -64,8 +64,18 @@ alert( arr ); // 5,3,8,1 (not modified)
 
 // For instance:
 
-// let arr = [5, 3, 8, 1];
+ let arr = [5, 2, 4, 3, 8, 1, 0];
 
-// filterRangeInPlace(arr, 1, 4); // removed the numbers except from 1 to 4
+ function filterRangeInPlace(arr,a,b){
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] < a || arr[i] > b){
+      arr.splice(i,1)
+      i--
+    }
+  }
+ }
 
-// alert( arr ); // [3, 1]
+ filterRangeInPlace(arr, 1, 4); // removed the numbers except from 1 to 4
+
+ alert( arr ); // [2, 4, 3, 1]
+
