@@ -100,9 +100,13 @@ sortArr.sort((a,b)=> b- b)
 
 // Create a function copySorted(arr) that returns such a copy.
 
-// let arr = ["HTML", "JavaScript", "CSS"];
+ let arr1 = ["HTML", "JavaScript", "CSS"];
 
-// let sorted = copySorted(arr);
+ function sorted1(arr1){
+  return arr1.slice().sort()
+ }
 
-// alert( sorted ); // CSS, HTML, JavaScript
-// alert( arr ); // HTML, JavaScript, CSS (no changes)
+ let sortedValue = sorted1(arr1);
+
+console.log( sortedValue ); // CSS, HTML, JavaScript
+console.log( arr1 ); // HTML, JavaScript, CSS (no changes)
