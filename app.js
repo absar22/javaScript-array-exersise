@@ -80,12 +80,16 @@ function filterRange(arr, a, b){
  alert( arr ); // [2, 4, 3, 1]
 
 
- 
+
 
 //  Sort in decreasing order
 //  importance: 4
-//  let arr = [5, 2, 1, -10, 8];
+ let sortArr = [5, 2, 1, -10, 8];
+
+
+sortArr.sort((a,b)=> b- b)
  
 //  // ... your code to sort it in decreasing order
  
-//  alert( arr ); // 8, 5, 2, 1, -10
+  alert( sortArr ); // 8, 5, 2, 1, -10
+
