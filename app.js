@@ -43,10 +43,16 @@ console.log(camelize('This-IS-my-name'))
 
 // For instance:
 
-// let arr = [5, 3, 8, 1];
+let arr = [5, 3, 8, 1];
 
-// let filtered = filterRange(arr, 1, 4);
+function filterRange(arr, a, b){
+  return arr.filter(item => (a <= item && item <= b))
+}
 
-// alert( filtered ); // 3,1 (matching values)
+let filtered = filterRange(arr, 1, 4);
 
-// alert( arr ); // 5,3,8,1 (not modified)
+alert( filtered ); // 3,1 (matching values)
+
+alert( arr ); // 5,3,8,1 (not modified)
+
+
