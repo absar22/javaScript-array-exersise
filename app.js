@@ -127,10 +127,31 @@ console.log( arr1 ); // HTML, JavaScript, CSS (no changes)
 // First, implement the method calculate(str) that takes a string like "1 + 2" in the format “NUMBER operator NUMBER” (space-delimited) and returns the result. Should understand plus + and minus -.
 
 // Usage example:
+let calc = new Calculator;
 
-// let calc = new Calculator;
+ console.log( calc.calculate("3 + 7") ); // 10
 
-// alert( calc.calculate("3 + 7") ); // 10
+function Calculator(){
+  
+ this.methods = {
+  '+' : (a,b) => a + b,
+  '-': (a,b) => a -b
+ }
+    
+  this.calculate = function(str){
+    let splitString = str.split(' '),
+    a = +splitString[0],
+    op = splitString[1],
+    b = +splitString[2]
+  
+
+  if(isNaN(a) || isNaN(b)){
+    return NaN
+  } 
+  return this.methods[op](a,b)
+  }
+}
+
 
 
 
@@ -150,3 +171,12 @@ console.log( arr1 ); // HTML, JavaScript, CSS (no changes)
 // No parentheses or complex expressions in this task.
 // The numbers and the operator are delimited with exactly one space.
 // There may be error handling if you’d like to add it.
+
+
+
+
+
+// indexOf/lastIndexOf(item, pos) – look for item starting from position pos, return the index or -1 if not found.
+// includes(value) – returns true if the array has value, otherwise false.
+// find/filter(func) – filter elements through the function, return first/all values that make it return true.
+// findIndex is like find, but returns the index instead of a value.
