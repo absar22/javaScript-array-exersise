@@ -127,9 +127,9 @@ console.log( arr1 ); // HTML, JavaScript, CSS (no changes)
 // First, implement the method calculate(str) that takes a string like "1 + 2" in the format “NUMBER operator NUMBER” (space-delimited) and returns the result. Should understand plus + and minus -.
 
 // Usage example:
-let calc = new Calculator;
+// let calc = new Calculator;
 
- console.log( calc.calculate("3 + 7") ); // 10
+//  console.log( calc.calculate("3 + 7") ); // 10
 
 function Calculator(){
   
@@ -150,6 +150,9 @@ function Calculator(){
   } 
   return this.methods[op](a,b)
   }
+  this.addMethod = function (name, func){
+    this.methods[name] = func
+  }
 }
 
 
@@ -161,13 +164,15 @@ function Calculator(){
 
 // For instance, let’s add the multiplication *, division / and power **:
 
-// let powerCalc = new Calculator;
-// powerCalc.addMethod("*", (a, b) => a * b);
-// powerCalc.addMethod("/", (a, b) => a / b);
-// powerCalc.addMethod("**", (a, b) => a ** b);
+ let powerCalc = new Calculator;
+ powerCalc.addMethod("*", (a, b) => a * b);
+ powerCalc.addMethod("/", (a, b) => a / b);
+ powerCalc.addMethod("**", (a, b) => a ** b);
+// let result = powerCalc.calculate('3 * 6')
+// console.log(powerCalc.methods)
 
-// let result = powerCalc.calculate("2 ** 3");
-// alert( result ); // 8
+ let result = powerCalc.calculate("2 ** 3");
+  console.log( result ); // 8
 // No parentheses or complex expressions in this task.
 // The numbers and the operator are delimited with exactly one space.
 // There may be error handling if you’d like to add it.
