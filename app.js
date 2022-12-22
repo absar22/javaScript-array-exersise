@@ -305,13 +305,42 @@
 
 // For instance:
 
- let john = { name: "John", age: 25 };
- let pete = { name: "Pete", age: 30 };
- let mary = { name: "Mary", age: 29 };
+        //  let john = { name: "John", age: 25 };
+        //  let pete = { name: "Pete", age: 30 };
+        //  let mary = { name: "Mary", age: 29 };
 
- let arr = [ john, pete, mary ];
-function getAverageAge(users){
- return users.reduce((acc,c) => acc + c.age, 0)/users.length
+        //  let arr = [ john, pete, mary ];
+        // function getAverageAge(users){
+        //  return users.reduce((acc,c) => acc + c.age, 0)/users.length
+        // }
+
+        //  console.log( getAverageAge(arr) ); // (25 + 30 + 29) / 3 = 28
+
+
+//         Filter unique array members
+// importance: 4
+// Let arr be an array.
+
+// Create a function unique(arr) that should return an array with unique items of arr.
+
+// For instance:
+
+// function unique(arr) {
+//   /* your code */
+// }
+
+let strings = ["Hare", "Krishna", "Hare", "Krishna",
+  "Krishna", "Krishna", "Hare", "Hare", ":-O"
+ ];
+ 
+function unique(arr){
+  let result  = []
+  for(let str of arr){
+        if(!result.includes(str)){
+         result.push(str)
+        }
+  }
+  return result
 }
 
- console.log( getAverageAge(arr) ); // (25 + 30 + 29) / 3 = 28
+ console.log( unique(strings) ); // Hare, Krishna, :-O
