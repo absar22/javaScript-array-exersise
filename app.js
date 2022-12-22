@@ -176,12 +176,31 @@ function Calculator(){
 // No parentheses or complex expressions in this task.
 // The numbers and the operator are delimited with exactly one space.
 // There may be error handling if you’d like to add it.
-
-
-
-
-
 // indexOf/lastIndexOf(item, pos) – look for item starting from position pos, return the index or -1 if not found.
 // includes(value) – returns true if the array has value, otherwise false.
 // find/filter(func) – filter elements through the function, return first/all values that make it return true.
 // findIndex is like find, but returns the index instead of a value.
+
+
+
+
+
+
+// Map to names
+// importance: 5
+// You have an array of user objects, each one has user.name. Write the code that converts it into an array of names.
+
+// For instance:
+
+let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 28 };
+
+let users = [ john, pete, mary ];
+
+let names = users.map(item => item.name)
+console.log(names)
+
+// let names = /* ... your code */
+
+// alert( names ); // John, Pete, Mary
