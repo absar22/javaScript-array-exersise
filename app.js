@@ -12,24 +12,24 @@
 // P.S. Hint: use split to split the string into an array, transform it and join back.
 
 
-function camelize(str){
-  let newString = str.split('-')
-  newString = newString.map(
-    function(word, index){
-      if(index === 0){
-        return word.toLowerCase()
-      }else{
-        return word[0].toUpperCase() + word.slice(1).toLowerCase()
-      }
-    }
-  )
-  return newString.join('')
-}
+        // function camelize(str){
+        //   let newString = str.split('-')
+        //   newString = newString.map(
+        //     function(word, index){
+        //       if(index === 0){
+        //         return word.toLowerCase()
+        //       }else{
+        //         return word[0].toUpperCase() + word.slice(1).toLowerCase()
+        //       }
+        //     }
+        //   )
+        //   return newString.join('')
+        // }
 
-console.log(camelize('This-Word')) 
-console.log(camelize('This-Word-letter')) 
-console.log(camelize('This-is-my-name')) 
-console.log(camelize('This-IS-my-name')) 
+        // console.log(camelize('This-Word')) 
+        // console.log(camelize('This-Word-letter')) 
+        // console.log(camelize('This-is-my-name')) 
+        // console.log(camelize('This-IS-my-name')) 
 
 
 
@@ -45,9 +45,9 @@ console.log(camelize('This-IS-my-name'))
 
 // let arr = [5, 3, 8, 1];
 
-function filterRange(arr, a, b){
-  return arr.filter(item => (a <= item && item <= b))
-}
+            // function filterRange(arr, a, b){
+            //   return arr.filter(item => (a <= item && item <= b))
+            // }
 
 // let filtered = filterRange(arr, 1, 4);
 
@@ -64,20 +64,20 @@ function filterRange(arr, a, b){
 
 // For instance:
 
- let arr = [5, 2, 4, 3, 8, 1, 0];
+              //  let arr = [5, 2, 4, 3, 8, 1, 0];
 
- function filterRangeInPlace(arr,a,b){
-  for(let i = 0; i < arr.length; i++){
-    if(arr[i] < a || arr[i] > b){
-      arr.splice(i,1)
-      i--
-    }
-  }
- }
+              //  function filterRangeInPlace(arr,a,b){
+              //   for(let i = 0; i < arr.length; i++){
+              //     if(arr[i] < a || arr[i] > b){
+              //       arr.splice(i,1)
+              //       i--
+              //     }
+              //   }
+              //  }
 
- filterRangeInPlace(arr, 1, 4); // removed the numbers except from 1 to 4
+              //  filterRangeInPlace(arr, 1, 4); // removed the numbers except from 1 to 4
 
- alert( arr ); // [2, 4, 3, 1]
+              //  alert( arr ); // [2, 4, 3, 1]
 
 
 
@@ -100,16 +100,16 @@ sortArr.sort((a,b)=> b- b)
 
 // Create a function copySorted(arr) that returns such a copy.
 
- let arr1 = ["HTML", "JavaScript", "CSS"];
+                    //  let arr1 = ["HTML", "JavaScript", "CSS"];
 
- function sorted1(arr1){
-  return arr1.slice().sort()
- }
+                    //  function sorted1(arr1){
+                    //   return arr1.slice().sort()
+                    //  }
 
- let sortedValue = sorted1(arr1);
+                    //  let sortedValue = sorted1(arr1);
 
-console.log( sortedValue ); // CSS, HTML, JavaScript
-console.log( arr1 ); // HTML, JavaScript, CSS (no changes)
+                    // console.log( sortedValue ); // CSS, HTML, JavaScript
+                    // console.log( arr1 ); // HTML, JavaScript, CSS (no changes)
 
 
 
@@ -131,29 +131,29 @@ console.log( arr1 ); // HTML, JavaScript, CSS (no changes)
 
 //  console.log( calc.calculate("3 + 7") ); // 10
 
-function Calculator(){
-  
- this.methods = {
-  '+' : (a,b) => a + b,
-  '-': (a,b) => a -b
- }
-    
-  this.calculate = function(str){
-    let splitString = str.split(' '),
-    a = +splitString[0],
-    op = splitString[1],
-    b = +splitString[2]
-  
+                      // function Calculator(){
+                        
+                      // this.methods = {
+                      //   '+' : (a,b) => a + b,
+                      //   '-': (a,b) => a -b
+                      // }
+                          
+                      //   this.calculate = function(str){
+                      //     let splitString = str.split(' '),
+                      //     a = +splitString[0],
+                      //     op = splitString[1],
+                      //     b = +splitString[2]
+                        
 
-  if(isNaN(a) || isNaN(b)){
-    return NaN
-  } 
-  return this.methods[op](a,b)
-  }
-  this.addMethod = function (name, func){
-    this.methods[name] = func
-  }
-}
+                      //   if(isNaN(a) || isNaN(b)){
+                      //     return NaN
+                      //   } 
+                      //   return this.methods[op](a,b)
+                      //   }
+                      //   this.addMethod = function (name, func){
+                      //     this.methods[name] = func
+                      //   }
+                      // }
 
 
 
@@ -164,15 +164,15 @@ function Calculator(){
 
 // For instance, let’s add the multiplication *, division / and power **:
 
- let powerCalc = new Calculator;
- powerCalc.addMethod("*", (a, b) => a * b);
- powerCalc.addMethod("/", (a, b) => a / b);
- powerCalc.addMethod("**", (a, b) => a ** b);
-// let result = powerCalc.calculate('3 * 6')
-// console.log(powerCalc.methods)
+              //  let powerCalc = new Calculator;
+              //  powerCalc.addMethod("*", (a, b) => a * b);
+              //  powerCalc.addMethod("/", (a, b) => a / b);
+              //  powerCalc.addMethod("**", (a, b) => a ** b);
+              // // let result = powerCalc.calculate('3 * 6')
+              // // console.log(powerCalc.methods)
 
- let result = powerCalc.calculate("2 ** 3");
-  console.log( result ); // 8
+              //  let result = powerCalc.calculate("2 ** 3");
+              //   console.log( result ); // 8
 // No parentheses or complex expressions in this task.
 // The numbers and the operator are delimited with exactly one space.
 // There may be error handling if you’d like to add it.
@@ -215,16 +215,16 @@ function Calculator(){
 
 // For instance:
 
- let john = { name: "John", surname: "Smith", id: 1 };
-let pete = { name: "Pete", surname: "Hunt", id: 2 };
- let mary = { name: "Mary", surname: "Key", id: 3 };
+            //  let john = { name: "John", surname: "Smith", id: 1 };
+            // let pete = { name: "Pete", surname: "Hunt", id: 2 };
+            //  let mary = { name: "Mary", surname: "Key", id: 3 };
 
-let users = [ john, pete, mary ];
+            // let users = [ john, pete, mary ];
 
-let usersMapped = users.map(user => ({
-  fullName: `${user.name} ${user.surname}`,
-  id: user.id
-}))
+            // let usersMapped = users.map(user => ({
+            //   fullName: `${user.name} ${user.surname}`,
+            //   id: user.id
+            // }))
 
 // /*
 // usersMapped = [
@@ -233,7 +233,31 @@ let usersMapped = users.map(user => ({
 //   { fullName: "Mary Key", id: 3 }
 // ]
 // */
-console.log(usersMapped)
+// console.log(usersMapped)
 // console.log( usersMapped[0].id ) // 1
 // alert( usersMapped[0].fullName ) // John Smith
 // So, actually you need to map one array of objects to another. Try using => here. There’s a small catch.
+
+
+
+// Sort users by age
+// importance: 5
+// Write the function sortByAge(users) that gets an array of objects with the age property and sorts them by age.
+
+// For instance:
+
+ let john = { name: "John", age: 25 };
+ let pete = { name: "Pete", age: 30 };
+ let mary = { name: "Mary", age: 28 };
+
+let arr = [ pete, john, mary ];
+function sortByAge(arr){
+  arr.sort((a,b) => a.age - b.age)
+}
+
+ sortByAge(arr);
+
+// // now: [john, mary, pete]
+ console.log(arr[0].name); // John
+ console.log(arr[1].name); // Mary
+console.log(arr[2].name); // Pete
