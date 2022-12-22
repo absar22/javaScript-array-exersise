@@ -329,18 +329,65 @@
 //   /* your code */
 // }
 
-let strings = ["Hare", "Krishna", "Hare", "Krishna",
-  "Krishna", "Krishna", "Hare", "Hare", ":-O"
- ];
+// let strings = ["Hare", "Krishna", "Hare", "Krishna",
+//   "Krishna", "Krishna", "Hare", "Hare", ":-O"
+//  ];
  
-function unique(arr){
-  let result  = []
-  for(let str of arr){
-        if(!result.includes(str)){
-         result.push(str)
-        }
-  }
-  return result
+// function unique(arr){
+//   let result  = []
+//   for(let str of arr){
+//         if(!result.includes(str)){
+//          result.push(str)
+//         }
+//   }
+//   return result
+// }
+
+//  console.log( unique(strings) ); // Hare, Krishna, :-O
+
+
+
+// Create keyed object from array
+// importance: 4
+// Let’s say we received an array of users in the form {id:..., name:..., age:... }.
+
+// Create a function groupById(arr) that creates an object from it, with id as the key, and array items as values.
+
+// For example:
+
+ let users = [
+   {id: 'john', name: "John Smith", age: 20},
+   {id: 'ann', name: "Ann Smith", age: 24},
+   {id: 'pete', name: "Pete Peterson", age: 31},
+];
+
+//  let usersById = groupById(users);
+
+//  function groupById(array){
+//         return array.reduce((obj , value) => {
+//             obj[value.id] = value 
+//             return obj   
+//         }, {})
+//  }
+
+function groupById(array){
+        let result = {}
+        array.forEach((item) => result[item.id] = item)
+        return result
 }
 
- console.log( unique(strings) ); // Hare, Krishna, :-O
+ console.log(usersById)
+// /*
+// // after the call we should have:
+
+// usersById = {
+//   john: {id: 'john', name: "John Smith", age: 20},
+//   ann: {id: 'ann', name: "Ann Smith", age: 24},
+//   pete: {id: 'pete', name: "Pete Peterson", age: 31},
+// }
+// */
+// Such function is really handy when working with server data.
+
+// In this task we assume that id is unique. There may be no two array items with the same id.
+
+// Please use array .reduce method in the solution.
